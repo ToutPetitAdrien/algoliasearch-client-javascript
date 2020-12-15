@@ -1,5 +1,4 @@
 import { MethodEnum, Request } from '@algolia/requester-common';
-// import mock, { MockRequest, MockResponse } from 'xhr-mock';
 import fetchMock from 'jest-fetch-mock';
 fetchMock.enableMocks();
 
