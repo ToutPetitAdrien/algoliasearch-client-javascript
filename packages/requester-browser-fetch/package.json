@@ -1,0 +1,22 @@
+{
+  "name": "@algolia/requester-browser-fetch",
+  "version": "4.8.3",
+  "private": false,
+  "description": "Promise-based request library for browser using fetch.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/algolia/algoliasearch-client-javascript.git"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "index.js",
+  "module": "dist/requester-browser-fetch.esm.js",
+  "types": "dist/requester-browser-fetch.d.ts",
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "dependencies": {
+    "@algolia/requester-common": "4.8.3"
+  }
+}

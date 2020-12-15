@@ -172,7 +172,7 @@ import {
 } from '@algolia/client-search';
 import { LogLevelEnum } from '@algolia/logger-common';
 import { createConsoleLogger } from '@algolia/logger-console';
-import { createBrowserXhrRequester } from '@algolia/requester-browser-xhr';
+import { createBrowserFetchRequester } from '@algolia/requester-browser-fetch';
 import { createUserAgent, RequestOptions } from '@algolia/transporter';
 
 import { AlgoliaSearchOptions, InitAnalyticsOptions, InitRecommendationOptions } from '../types';
@@ -190,7 +190,7 @@ export default function algoliasearch(
       read: 2,
       write: 30,
     },
-    requester: createBrowserXhrRequester(),
+    requester: createBrowserFetchRequester(),
     logger: createConsoleLogger(LogLevelEnum.Error),
     responsesCache: createInMemoryCache(),
     requestsCache: createInMemoryCache({ serializable: false }),
