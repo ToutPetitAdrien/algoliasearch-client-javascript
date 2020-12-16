@@ -51,15 +51,17 @@ packagesConfig.push({
   external: ['crypto'],
 });
 
-['cache-browser-local-storage', 'requester-browser-xhr', 'requester-browser-fetch'].forEach(packageId => {
-  packagesConfig.push({
-    output: packageId,
-    package: packageId,
-    input: defaultInput,
-    formats: ['cjs', 'esm'],
-    external: ['dom'],
-  });
-});
+['cache-browser-local-storage', 'requester-browser-xhr', 'requester-browser-fetch'].forEach(
+  packageId => {
+    packagesConfig.push({
+      output: packageId,
+      package: packageId,
+      input: defaultInput,
+      formats: ['cjs', 'esm'],
+      external: ['dom'],
+    });
+  }
+);
 
 packagesConfig.push({
   output: 'requester-node-http',
