@@ -15,6 +15,7 @@ export const createBrowserFetchRequester = (): Requester => ({
     return fetch(request.url, {
       method: request.method,
       headers: new Headers(request.headers),
+      body: request.data,
       signal,
     })
       .then(response => {
